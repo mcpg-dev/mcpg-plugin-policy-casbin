@@ -1,0 +1,17 @@
+schema: mcpg.dev/plugin/v1
+id: dev.mcpg.policy.casbin
+name: Casbin Policy Engine
+license: BUSL-1.1
+description: |
+  Embedded Casbin authorization engine. Operators
+  supply a model file (`.conf` — request shape, policy shape,
+  matcher) + a policy file (`.csv`); the plugin builds a Casbin
+  Enforcer at boot and evaluates per-request `(decision_point,
+  input, context)` envelopes against it via configurable
+  translation rules. Multi-model — operators express RBAC, ABAC,
+  ACL, RBAC-with-domains, etc. by changing the model file.
+  Pure offline; ~2MB stripped cdylib (smaller than Cedar / OPA).
+class: policy_engine
+runtime: native-cdylib-v1
+protocol_version: "1.0"
+required_capabilities: []
