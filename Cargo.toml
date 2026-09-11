@@ -1,6 +1,6 @@
 [package]
 name = "mcpg-plugin-policy-casbin"
-version = "0.1.0-alpha.26"
+version = "0.1.0-alpha.27"
 license = "BUSL-1.1"
 edition = "2024"
 description = "Casbin policy_engine plugin for MCPG gateway (dev.mcpg.policy.casbin)"
@@ -9,13 +9,13 @@ description = "Casbin policy_engine plugin for MCPG gateway (dev.mcpg.policy.cas
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-mcpg-plugin-protocol = { git = "https://github.com/mcpg-dev/mcpg-plugin-protocol", tag = "v0.1.0-beta.23", version = "=0.1.0-beta.23" }
-mcpg-cluster-api = { git = "https://github.com/mcpg-dev/mcpg-cluster-api", tag = "v0.1.0-beta.23", version = "=0.1.0-beta.23" }
+mcpg-plugin-protocol = { git = "https://github.com/mcpg-dev/mcpg-plugin-protocol", tag = "v0.1.0-beta.24", version = "=0.1.0-beta.24" }
+mcpg-cluster-api = { git = "https://github.com/mcpg-dev/mcpg-cluster-api", tag = "v0.1.0-beta.24", version = "=0.1.0-beta.24" }
 # `static-firstparty` exposes
 # `HostHandle::from_services` for in-process construction in tests
 # without affecting the cdylib build path.
-mcpg-plugin-sdk = { git = "https://github.com/mcpg-dev/mcpg-plugin-sdk", tag = "v0.1.0-beta.24", version = "=0.1.0-beta.24", features = ["static-firstparty"] }
-mcpg-bundle-reload = { git = "https://github.com/mcpg-dev/mcpg-bundle-reload", tag = "v0.1.0-beta.22", version = "=0.1.0-beta.22", default-features = false }
+mcpg-plugin-sdk = { git = "https://github.com/mcpg-dev/mcpg-plugin-sdk", tag = "v0.1.0-beta.25", version = "=0.1.0-beta.25", features = ["static-firstparty"] }
+mcpg-bundle-reload = { git = "https://github.com/mcpg-dev/mcpg-bundle-reload", tag = "v0.1.0-beta.23", version = "=0.1.0-beta.23", default-features = false }
 async-trait = "0.1"
 bytes = "1"
 metrics = "0.24"
